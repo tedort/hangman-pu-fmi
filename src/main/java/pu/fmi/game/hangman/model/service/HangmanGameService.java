@@ -30,6 +30,10 @@ public class HangmanGameService {
         this.gameProperties = gameProperties;
     }
 
+    public List<HangmanGame> getStoredGamesCollection() {
+        return storedGamesCollection;
+    }
+
     @PostConstruct
     public void init() {
         System.out.println("Този методи се извиква при инициализация на bean-a");

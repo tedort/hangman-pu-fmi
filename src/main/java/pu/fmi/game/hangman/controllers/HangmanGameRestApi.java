@@ -42,4 +42,10 @@ public class HangmanGameRestApi {
         return hangmanGameService.getGameById(id);
     }
 
+    // GET /hangman-games
+    @GetMapping
+    public List<HangmanGame> getHangmanGames() {
+        return hangmanGameService.getStoredGamesCollection();
+    }
+
 }
