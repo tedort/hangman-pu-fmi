@@ -1,7 +1,7 @@
 package pu.fmi.game.hangman.model.service;
 
 import java.util.List;
-import pu.fmi.game.hangman.model.entity.HangmanDTO;
+
 import pu.fmi.game.hangman.model.entity.HangmanGame;
 import pu.fmi.game.hangman.model.entity.Status;
 
@@ -16,4 +16,6 @@ public interface GameService {
   HangmanGame getGameById(Long id);
 
   List<HangmanGame> getAllGames();
+
+  List<HangmanGame> getFirst10GamesOrderedByDateDesc();
 }

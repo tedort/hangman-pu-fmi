@@ -44,15 +44,21 @@ public class HangmanGameRestApi {
   }
 
   // GET /hangman-games
-  @GetMapping
-  public List<HangmanGame> fetchAllGames() {
-    return hangmanGameService.getAllGames();
-  }
+//  @GetMapping
+//  public List<HangmanGame> fetchAllGames() {
+//    return hangmanGameService.getAllGames();
+//  }
 
   // GET /hangman-games/status
   @GetMapping("/status")
   public List<HangmanGame> fetchAllByStatus(@RequestParam Status status){
     return hangmanGameService.findAllByStatus(status);
+  }
+
+  // GET /hangman-games
+  @GetMapping
+  public List<HangmanGame> fetchFirst10GamesOrderedByDateDesc() {
+    return hangmanGameService.getFirst10GamesOrderedByDateDesc();
   }
 
 }
