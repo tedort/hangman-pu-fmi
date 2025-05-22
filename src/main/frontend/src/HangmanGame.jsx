@@ -29,7 +29,7 @@ function HangmanGame({ game, setGame }) {
        */
        }
       { 
-        bulgarianAlphabet.map((letter) => {
+        (game.status === "IN_PROGRESS") && bulgarianAlphabet.map((letter) => {
             return <button onClick={() => makeGuess(letter)}>{letter}</button>;
         })
       }
